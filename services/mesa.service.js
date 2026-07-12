@@ -1,4 +1,4 @@
-const prisma = require("../prisma/client");
+const prisma = require("../config/prisma");
 
 const obtenerMesas = async () => {
     return await prisma.mesas.findMany();

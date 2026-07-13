@@ -4,6 +4,7 @@ const express = require("express");
 const cors = require("cors");
 const mesaRoutes = require("./routes/mesa.routes");
 const authRoutes = require("./routes/auth.routes");
+const reservacionRoutes = require("./routes/reservacion.routes");
 
 const app = express();
 
@@ -11,6 +12,7 @@ app.use(cors());
 app.use(express.json());
 app.use("/api/mesas", mesaRoutes);
 app.use("/api/auth", authRoutes);
+app.use("/api/reservaciones", reservacionRoutes);
 
 const PORT = process.env.PORT || 3000;
 
